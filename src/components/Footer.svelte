@@ -5,7 +5,7 @@
 <style>
 .footer {
 
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 50px;
