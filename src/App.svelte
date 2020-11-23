@@ -23,6 +23,7 @@
 <style>
 	.main {
 		text-align: center;
+		height: auto;
 	}
 
 	.container	{
@@ -96,5 +97,4 @@
 </div>
 
 <Footer />
-
 </div>
