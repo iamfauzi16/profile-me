@@ -81,7 +81,7 @@
 		</div>
 		{/if}
 	</div>
-</div>
+
 
 <div class="skills">
 	<h2>Skills</h2>
@@ -96,3 +96,5 @@
 </div>
 
 <Footer />
+
+</div>
