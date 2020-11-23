@@ -58,6 +58,7 @@
 
 	.skills {
 		margin-top: 2em;
+		margin-bottom: 3em;
 	}
 	
 </style>
@@ -84,17 +85,17 @@
 	</div>
 
 
-<div class="skills">
-	<h2>Skills</h2>
-	<progress class="nes-progress" value="80" max="100"></progress>
-	<Content skills={'Troubleshoot Hardware , Software PC Desktop atau Laptop'}/>
-	
-	<progress class="nes-progress" value="70" max="100"></progress>
-	<Content skills={'Konfigurasi Mikrotik dan Hotspot'}/>
+	<div class="skills">
+		<h2>Skills</h2>
+		<progress class="nes-progress" value="80" max="100"></progress>
+		<Content skills={'Troubleshoot Hardware , Software PC Desktop atau Laptop'}/>
+		
+		<progress class="nes-progress" value="70" max="100"></progress>
+		<Content skills={'Konfigurasi Mikrotik dan Hotspot'}/>
 
-	<progress class="nes-progress" value="85" max="100"></progress>
-	<Content skills={'Membuat User Interface Dengan Figma dan adobe XD'}/>
-</div>
+		<progress class="nes-progress" value="85" max="100"></progress>
+		<Content skills={'Membuat User Interface Dengan Figma dan adobe XD'}/>
+	</div>
 
-<Footer />
+	<Footer />
 </div>

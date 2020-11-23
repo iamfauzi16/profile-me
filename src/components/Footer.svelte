@@ -3,13 +3,25 @@
 </script>
 
 <style>
-    p {
-        text-align: center;
-        background-color: black;
-        color: white;
-    }
+.footer {
 
+    position: relative;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    font-size: 14px;
+}
 </style>
 
 
-<p> Create <i class="nes-icon is-large like" id="icon"></i>{name}</p>
+<div class="footer">
+    <p>Create by {name} v.01</p>
+</div>
