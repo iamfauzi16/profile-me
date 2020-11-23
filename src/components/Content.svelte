@@ -3,7 +3,9 @@
 </script>
 
 <style>
-
+  li {
+      text-align: left;
+  }
 </style>
 
 <div class="lists">

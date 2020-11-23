@@ -64,6 +64,7 @@
 	/* Skills div */
 
 	.skills {
+		
 		height: 500px;
 		margin-top: 2em;
 	}
