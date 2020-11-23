@@ -8,10 +8,13 @@
 	let isLoaded= false;
 
 	setTimeout(function (){
-		isLoaded = true;
-	}, 2000);
+		isLoaded = true,
+		LoadingTampilan = true;
+	}, 3000);
 
-	
+
+
+	let LoadingTampilan = false;
 </script>
 
 <svelte:head>
@@ -53,6 +56,11 @@
 
 	}
 
+	h2.loading {
+		margin-top: 50%;
+		text-align: center;
+	}
+
 
 	/* Skills div */
 
@@ -62,13 +70,14 @@
 	}
 	
 </style>
-
+{#if LoadingTampilan === true}
 <div class="main">
+	
 	<HeaderSatu />
 	<h2>Halo, bro</h2>
 	<p>Selamat Datang silahkan kunjungi sosial media gue</p>
 	<div class="container">
-	{#if isLoaded}
+		{#if isLoaded}
 		<div in:fly={{ y: 200, duration: 2000}} out:fade id="header">
 			<a class="nes-btn a" href="https://www.facebook.com/ZigoongRev/">Facebook</a>
 			<a class="nes-btn b" href="https://twitter.com/mhmmdfauzi_22">Twitter</a>
@@ -99,3 +108,6 @@
 
 	<Footer />
 </div>
+{:else}
+<h2 class="loading">Loading Page...</h2>
+{/if}
