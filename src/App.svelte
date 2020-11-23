@@ -57,7 +57,6 @@
 	}
 
 	h2.loading {
-		margin-top: 50%;
 		text-align: center;
 	}
 
@@ -65,8 +64,8 @@
 	/* Skills div */
 
 	.skills {
+		height: 500px;
 		margin-top: 2em;
-		margin-bottom: 3em;
 	}
 	
 </style>
