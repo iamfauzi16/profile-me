@@ -1,113 +1,53 @@
 <script>
-	import HeaderSatu from './components/HeaderSatu.svelte';
-	import Content from './components/Content.svelte';
-	import  {fly, fade} from 'svelte/transition';
-	import Footer from './components/Footer.svelte';
-
-
-	let isLoaded= false;
-
-	setTimeout(function (){
-		isLoaded = true,
-		LoadingTampilan = true;
-	}, 3000);
-
-
-
-	let LoadingTampilan = false;
+	let src= 'image/myImages.png';
+	let information = 'my images portfolio';
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="nes.min.css">
-	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<title>Hai, Aku Fauzi Aku Seorang IT Support</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="skeleton.css">
 </svelte:head>
 
+
 <style>
-	.main {
-		text-align: center;
-		height: auto;
-	}
-
-	.container	{
-		height: 300px;
-		background-color: #e4e978;
-
-	}
-	.nes-btn {
-		margin-top: 2em;
-		color: white;
-	}
-
-	.a {
-		background-color:#0f4c75;
-	}
-
-	.b {
-		background-color:#00b7c2;
-	}
-
-	.c {
-		background-color: #d54062;
-	}
-
-	.icon {
-		margin-top: 1em;
-
-	}
-
-	h2.loading {
-		text-align: center;
-	}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Staatliches&display=swap');
 
 
-	/* Skills div */
-
-	.skills {
-		
-		height: 500px;
-		margin-top: 2em;
-	}
+:global(body){
+	font-family: 'Red Hat Display', sans-serif;
 	
+}
+
+img {
+	width: 200px;
+}
+
+h2.tentang_saya {
+	font-family: 'Staatliches', cursive;
+}
+
+p.content_tentang {
+	font-size: 16px;
+	color: #393e46;
+	text-align: left;
+}
+
+
+
 </style>
-{#if LoadingTampilan === true}
-<div class="main">
-	
-	<HeaderSatu />
-	<h2>Halo, bro</h2>
-	<p>Selamat Datang silahkan kunjungi sosial media gue</p>
+
+<section>
 	<div class="container">
-		{#if isLoaded}
-		<div in:fly={{ y: 200, duration: 2000}} out:fade id="header">
-			<a class="nes-btn a" href="https://www.facebook.com/ZigoongRev/">Facebook</a>
-			<a class="nes-btn b" href="https://twitter.com/mhmmdfauzi_22">Twitter</a>
-			<a class="nes-btn c" href="https://dribbble.com/iamfauzi">Dribbble</a>
-			
-			<div class="icon">
-				<i class="nes-icon is-large heart"></i>
-				<i class="nes-icon is-large heart"></i>
-				<i class="nes-icon is-large heart"></i>
-				<i class="nes-icon is-large is-half heart"></i>
+		<div class="row">
+			<div class="five columns">
+				<img src={src} alt={information} class="profile">
+			</div>
+			<div class="seven columns">
+				<h2 class="tentang_saya">Tentang saya</h2>
+				<p class="content_tentang">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatibus magni neque similique natus dolore accusantium accusamus ipsam iusto! Nisi accusamus totam nulla blanditiis quisquam nam, unde rem numquam inventore voluptatem laudantium architecto, eaque consequuntur obcaecati expedita fuga a repellat neque. Corrupti sed, magni nam iure doloribus optio itaque, sapiente voluptatum ad non delectus veniam iusto praesentium id asperiores? Omnis voluptatibus autem similique doloribus velit ipsum, distinctio, error officia consequatur dolor atque rem sed architecto, dolores esse nisi? Cumque corporis rem, assumenda dolor a repudiandae consectetur impedit cum dolores molestiae. Saepe, sequi sapiente! Voluptatibus provident quae, enim distinctio harum nulla?</p>
 			</div>
 		</div>
-		{/if}
 	</div>
+</section>
 
-
-	<div class="skills">
-		<h2>Skills</h2>
-		<progress class="nes-progress" value="80" max="100"></progress>
-		<Content skills={'Troubleshoot Hardware , Software PC Desktop atau Laptop'}/>
-		
-		<progress class="nes-progress" value="70" max="100"></progress>
-		<Content skills={'Konfigurasi Mikrotik dan Hotspot'}/>
-
-		<progress class="nes-progress" value="85" max="100"></progress>
-		<Content skills={'Membuat User Interface Dengan Figma dan adobe XD'}/>
-	</div>
-
-	<Footer />
-</div>
-{:else}
-<h2 class="loading">Loading Page...</h2>
-{/if}

@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+    h2.tentang_saya {
+        font-family: 'Staatliches', cursive;
+        font-size: 45px;
+    }
+    img.profile {
+        width: 150px;
+        border-radius: 100px;
+    }
+    p.content_tentang {
+        text-align: center !important;
+    }
+}
