@@ -13,4 +13,15 @@
     p.content_tentang {
         text-align: center !important;
     }
+    ul {
+        text-align: center;
+        padding: 40px;
+    }
+    li {
+        display: inline-block;
+        padding-right: 3em;
+    }
+    li img {
+        width: 80px;
+    }
 }
