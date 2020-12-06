@@ -1,48 +1,84 @@
 <script>
-	// import AudioPlayer from './components/AudioPlayer.svelte';
-	let src= 'image/myImages.png';
-	// let icon= 'image/icon-img.png';
-	let information = 'my images portfolio';
+  // import AudioPlayer from './components/AudioPlayer.svelte';
+  let src = "image/myImages.png";
+  // let icon= 'image/icon-img.png';
+  let information = "my images portfolio";
 </script>
 
-<svelte:head>
-	<title>Hai, Aku Fauzi Aku Seorang IT Support</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="skeleton.css">
-</svelte:head>
-
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Staatliches&display=swap');
+  @media only screen and (max-width: 600px) {
+    :global(body) {
+      font-family: "Spartan", sans-serif;
+      margin: auto;
+    }
+    .container {
+      text-align: center;
+      background-color: rgb(250, 250, 250);
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.171);
+    }
 
+    img {
+      width: 100px;
+      border-radius: 100px;
+    }
 
-:global(body){
-	font-family: 'Red Hat Display', sans-serif;
-	
-}
+    h2.tentang_saya {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: "Spartan", sans-serif;
+    }
 
-img {
-	width: 200px;
-	border-radius: 100px;
+    p.content_tentang {
+      font-size: 14px;
+      color: #525252;
+    }
 
-}
+    a.button {
+      background-color: #ec5858;
+      color: white;
+    }
+  }
 
-h2.tentang_saya {
-	font-family: 'Staatliches', cursive;
-}
+  @media only screen and (min-width: 1200px) {
+    @import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
 
-p.content_tentang {
-	font-size: 16px;
-	color: #393e46;
-	text-align: left;
-}
+    :global(body) {
+      font-family: "Spartan", sans-serif;
+      margin: auto;
+    }
 
-a.button {
-	background-color: #ec5858;
-	color: white;
-}
+    .container {
+      text-align: center;
+      background-color: rgb(250, 250, 250);
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.171);
+      max-width: 50%;
+    }
 
-/* ul {
+    img {
+      width: 200px;
+      border-radius: 100px;
+    }
+
+    h2.tentang_saya {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: "Spartan", sans-serif;
+    }
+
+    p.content_tentang {
+      font-size: 20px;
+      color: #525252;
+    }
+
+    a.button {
+      background-color: #ec5858;
+      color: white;
+    }
+  }
+
+  /* ul {
 	text-align: center;
 	padding: 40px;
 	
@@ -56,26 +92,31 @@ li img {
 	width : 80px;
 	
 } */
-
-
-
 </style>
 
-<section>
-	<div class="container">
-		<div class="row">
-			<div class="five columns">
-				<img src={src} alt={information} class="profile">
-			</div>
-			<div class="seven columns">
-				<h2 class="tentang_saya">Tentang saya</h2>
-				<p class="content_tentang">Hai, saya fauzi🖐. Saya mahasiswa di Universitas Bina Sarana Informatika mengambil jurusan Teknologi Komputer dan saat ini  sudah berjalan di Semester 5. Hobi saya mendesain, bermain bulu tangkis, futsal, jika ada waktu saya bermain games 😅</p>
-				<a class="button" href="https://dribbble.com/iamfauzi">Go my dribbble</a>
+<svelte:head>
+  <title>Hai, Aku Fauzi Aku Seorang IT Support</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="skeleton.css" />
+</svelte:head>
 
-				<!-- <AudioPlayer  src="voice.mp3" /> -->
-			</div>
-		</div>
-	</div>
+<section>
+  <div class="container">
+    <div class="img"><img {src} alt={information} class="profile" /></div>
+
+    <div class="content">
+      <h2 class="tentang_saya">Tentang saya</h2>
+      <p class="content_tentang">
+        Hai, saya fauzi🖐. Saya mahasiswa di Universitas Bina Sarana Informatika
+        mengambil jurusan Teknologi Komputer dan saat ini sudah berjalan di
+        Semester 5. Hobi saya mendesain, bermain bulu tangkis, futsal, jika ada
+        waktu saya bermain games 😅
+      </p>
+      <a class="button" href="https://dribbble.com/iamfauzi">Go my dribbble</a>
+
+      <!-- <AudioPlayer  src="voice.mp3" /> -->
+    </div>
+  </div>
 </section>
 
 <!-- <section>
@@ -101,4 +142,3 @@ li img {
 		</div>
 	</div>
 </section> -->
-
